@@ -8,8 +8,8 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/go-kit/kit/endpoint"
-	httptransport "github.com/go-kit/kit/transport/http"
+	"github.com/yyf330/kit/endpoint"
+	httptransport "github.com/yyf330/kit/transport/http"
 )
 
 // StringService provides operations on strings.
@@ -53,7 +53,7 @@ type countResponse struct {
 	V int `json:"v"`
 }
 
-// Endpoints are a primary abstraction in go-kit. An endpoint represents a single RPC (method in our service interface)
+// Endpoints are a primary abstraction in yyf330. An endpoint represents a single RPC (method in our service interface)
 func makeUppercaseEndpoint(svc StringService) endpoint.Endpoint {
 	return func(_ context.Context, request interface{}) (interface{}, error) {
 		req := request.(uppercaseRequest)

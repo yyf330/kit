@@ -5,10 +5,10 @@ import (
 	"io"
 	"time"
 
-	"github.com/go-kit/kit/endpoint"
-	"github.com/go-kit/kit/log"
-	"github.com/go-kit/kit/sd"
-	"github.com/go-kit/kit/sd/lb"
+	"github.com/yyf330/kit/endpoint"
+	"github.com/yyf330/kit/log"
+	"github.com/yyf330/kit/sd"
+	"github.com/yyf330/kit/sd/lb"
 )
 
 func Example() {

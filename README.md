@@ -1,4 +1,4 @@
-# Go kit<br/>[![Circle CI](https://circleci.com/gh/go-kit/kit.svg?style=shield)](https://circleci.com/gh/go-kit/kit) [![Travis CI](https://travis-ci.org/go-kit/kit.svg?branch=master)](https://travis-ci.org/go-kit/kit) [![builds.sr.ht status](https://builds.sr.ht/~peterbourgon/kit.svg)](https://builds.sr.ht/~peterbourgon/kit?) [![GoDoc](https://godoc.org/github.com/go-kit/kit?status.svg)](https://godoc.org/github.com/go-kit/kit) [![Coverage Status](https://coveralls.io/repos/go-kit/kit/badge.svg?branch=master&service=github)](https://coveralls.io/github/go-kit/kit?branch=master) [![Go Report Card](https://goreportcard.com/badge/go-kit/kit)](https://goreportcard.com/report/go-kit/kit) [![Sourcegraph](https://sourcegraph.com/github.com/go-kit/kit/-/badge.svg)](https://sourcegraph.com/github.com/go-kit/kit?badge)
+# Go kit<br/>[![Circle CI](https://circleci.com/gh/yyf330/kit.svg?style=shield)](https://circleci.com/gh/yyf330/kit) [![Travis CI](https://travis-ci.org/yyf330/kit.svg?branch=master)](https://travis-ci.org/yyf330/kit) [![builds.sr.ht status](https://builds.sr.ht/~peterbourgon/kit.svg)](https://builds.sr.ht/~peterbourgon/kit?) [![GoDoc](https://godoc.org/github.com/yyf330/kit?status.svg)](https://godoc.org/github.com/yyf330/kit) [![Coverage Status](https://coveralls.io/repos/yyf330/kit/badge.svg?branch=master&service=github)](https://coveralls.io/github/yyf330/kit?branch=master) [![Go Report Card](https://goreportcard.com/badge/yyf330/kit)](https://goreportcard.com/report/yyf330/kit) [![Sourcegraph](https://sourcegraph.com/github.com/yyf330/kit/-/badge.svg)](https://sourcegraph.com/github.com/yyf330/kit?badge)
 
 **Go kit** is a **programming toolkit** for building microservices
 (or elegant monoliths) in Go. We solve common problems in distributed
@@ -6,8 +6,8 @@ systems and application architecture so you can focus on delivering
 business value.
 
 - Website: [gokit.io](https://gokit.io)
-- Mailing list: [go-kit](https://groups.google.com/forum/#!forum/go-kit)
-- Slack: [gophers.slack.com](https://gophers.slack.com) **#go-kit** ([invite](https://gophersinvite.herokuapp.com/))
+- Mailing list: [yyf330](https://groups.google.com/forum/#!forum/yyf330)
+- Slack: [gophers.slack.com](https://gophers.slack.com) **#yyf330** ([invite](https://gophersinvite.herokuapp.com/))
 
 ## Motivation
 
@@ -25,14 +25,14 @@ organizations of any size.
 
 For more details, see
  [the website](https://gokit.io),
- [the motivating blog post](http://peter.bourgon.org/go-kit/) and
+ [the motivating blog post](http://peter.bourgon.org/yyf330/) and
  [the video of the talk](https://www.youtube.com/watch?v=iFR_7AKkJFU).
 See also the
  [Go kit talk at GopherCon 2015](https://www.youtube.com/watch?v=1AjaZi4QuGo).
 
 ## Goals
 
-- Operate in a heterogeneous SOA — expect to interact with mostly non-Go-kit services
+- Operate in a heterogeneous SOA — expect to interact with mostly non-yyf330 services
 - RPC as the primary messaging pattern
 - Pluggable serialization and transport — not just JSON over HTTP
 - Operate within existing infrastructures — no mandates for specific tools or technologies
@@ -46,7 +46,7 @@ See also the
 ## Contributing
 
 Please see [CONTRIBUTING.md](/CONTRIBUTING.md).
-Thank you, [contributors](https://github.com/go-kit/kit/graphs/contributors)!
+Thank you, [contributors](https://github.com/yyf330/kit/graphs/contributors)!
 
 ## Dependency management
 
@@ -106,7 +106,7 @@ Projects with a ★ have had particular influence on Go kit's design (or vice-ve
 - [Goji](https://github.com/zenazn/goji)
 - [Martini](https://github.com/go-martini/martini)
 - [Beego](http://beego.me/)
-- [Revel](https://revel.github.io/) (considered [harmful](https://github.com/go-kit/kit/issues/350))
+- [Revel](https://revel.github.io/) (considered [harmful](https://github.com/yyf330/kit/issues/350))
 - [GoBuffalo](https://gobuffalo.io/)
 
 ## Additional reading

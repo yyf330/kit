@@ -8,8 +8,8 @@ import (
 
 	"github.com/hudl/fargo"
 
-	"github.com/go-kit/kit/log"
-	"github.com/go-kit/kit/sd"
+	"github.com/yyf330/kit/log"
+	"github.com/yyf330/kit/sd"
 )
 
 // Matches official Netflix Java client default.

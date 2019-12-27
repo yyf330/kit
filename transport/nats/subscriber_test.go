@@ -12,8 +12,8 @@ import (
 	"github.com/nats-io/nats-server/server"
 	"github.com/nats-io/nats.go"
 
-	"github.com/go-kit/kit/endpoint"
-	natstransport "github.com/go-kit/kit/transport/nats"
+	"github.com/yyf330/kit/endpoint"
+	natstransport "github.com/yyf330/kit/transport/nats"
 )
 
 type TestResponse struct {

@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/go-kit/kit/endpoint"
-	"github.com/go-kit/kit/sd"
+	"github.com/yyf330/kit/endpoint"
+	"github.com/yyf330/kit/sd"
 )
 
 func TestRoundRobin(t *testing.T) {

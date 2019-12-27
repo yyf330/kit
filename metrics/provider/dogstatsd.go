@@ -1,8 +1,8 @@
 package provider
 
 import (
-	"github.com/go-kit/kit/metrics"
-	"github.com/go-kit/kit/metrics/dogstatsd"
+	"github.com/yyf330/kit/metrics"
+	"github.com/yyf330/kit/metrics/dogstatsd"
 )
 
 type dogstatsdProvider struct {

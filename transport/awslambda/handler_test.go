@@ -7,9 +7,9 @@ import (
 	"testing"
 
 	"github.com/aws/aws-lambda-go/events"
-	"github.com/go-kit/kit/endpoint"
-	"github.com/go-kit/kit/log"
-	"github.com/go-kit/kit/transport"
+	"github.com/yyf330/kit/endpoint"
+	"github.com/yyf330/kit/log"
+	"github.com/yyf330/kit/transport"
 )
 
 type key int

@@ -9,7 +9,7 @@ import (
 	"crypto/subtle"
 
 	jwt "github.com/dgrijalva/jwt-go"
-	"github.com/go-kit/kit/endpoint"
+	"github.com/yyf330/kit/endpoint"
 )
 
 type customClaims struct {
@@ -27,8 +27,8 @@ var (
 	myProperty     = "some value"
 	method         = jwt.SigningMethodHS256
 	invalidMethod  = jwt.SigningMethodRS256
-	mapClaims      = jwt.MapClaims{"user": "go-kit"}
-	standardClaims = jwt.StandardClaims{Audience: "go-kit"}
+	mapClaims      = jwt.MapClaims{"user": "yyf330"}
+	standardClaims = jwt.StandardClaims{Audience: "yyf330"}
 	myCustomClaims = customClaims{MyProperty: myProperty, StandardClaims: standardClaims}
 	// Signed tokens generated at https://jwt.io/
 	signedKey         = "eyJhbGciOiJIUzI1NiIsImtpZCI6ImtpZCIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiZ28ta2l0In0.14M2VmYyApdSlV_LZ88ajjwuaLeIFplB8JpyNy0A19E"
@@ -178,7 +178,7 @@ func TestJWTParser(t *testing.T) {
 	if !ok {
 		t.Fatal("Claims were not passed into context correctly")
 	}
-	if !stdCl.VerifyAudience("go-kit", true) {
+	if !stdCl.VerifyAudience("yyf330", true) {
 		t.Fatalf("JWT jwt.StandardClaims.Audience did not match: expecting %s got %s", standardClaims.Audience, stdCl.Audience)
 	}
 
@@ -193,7 +193,7 @@ func TestJWTParser(t *testing.T) {
 	if !ok {
 		t.Fatal("Claims were not passed into context correctly")
 	}
-	if !custCl.VerifyAudience("go-kit", true) {
+	if !custCl.VerifyAudience("yyf330", true) {
 		t.Fatalf("JWT customClaims.Audience did not match: expecting %s got %s", standardClaims.Audience, custCl.Audience)
 	}
 	if !custCl.VerifyMyProperty(myProperty) {

@@ -10,8 +10,8 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/go-kit/kit/endpoint"
-	httptransport "github.com/go-kit/kit/transport/http"
+	"github.com/yyf330/kit/endpoint"
+	httptransport "github.com/yyf330/kit/transport/http"
 )
 
 // AuthError represents an authorization error.
@@ -19,7 +19,7 @@ type AuthError struct {
 	Realm string
 }
 
-// StatusCode is an implementation of the StatusCoder interface in go-kit/http.
+// StatusCode is an implementation of the StatusCoder interface in yyf330/http.
 func (AuthError) StatusCode() int {
 	return http.StatusUnauthorized
 }
@@ -29,7 +29,7 @@ func (AuthError) Error() string {
 	return http.StatusText(http.StatusUnauthorized)
 }
 
-// Headers is an implementation of the Headerer interface in go-kit/http.
+// Headers is an implementation of the Headerer interface in yyf330/http.
 func (e AuthError) Headers() http.Header {
 	return http.Header{
 		"Content-Type":           []string{"text/plain; charset=utf-8"},

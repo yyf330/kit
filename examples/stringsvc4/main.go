@@ -9,9 +9,9 @@ import (
 	"flag"
 	"net/http"
 
-	"github.com/go-kit/kit/endpoint"
-	natstransport "github.com/go-kit/kit/transport/nats"
-	httptransport "github.com/go-kit/kit/transport/http"
+	"github.com/yyf330/kit/endpoint"
+	natstransport "github.com/yyf330/kit/transport/nats"
+	httptransport "github.com/yyf330/kit/transport/http"
 
 	"github.com/nats-io/nats.go"
 )
@@ -57,7 +57,7 @@ type countResponse struct {
 	V int `json:"v"`
 }
 
-// Endpoints are a primary abstraction in go-kit. An endpoint represents a single RPC (method in our service interface)
+// Endpoints are a primary abstraction in yyf330. An endpoint represents a single RPC (method in our service interface)
 func makeUppercaseHTTPEndpoint(nc *nats.Conn) endpoint.Endpoint {
 	return natstransport.NewPublisher(
 		nc,

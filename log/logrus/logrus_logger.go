@@ -1,12 +1,12 @@
 // Package logrus provides an adapter to the
-// go-kit log.Logger interface.
+// yyf330 log.Logger interface.
 package logrus
 
 import (
 	"errors"
 	"fmt"
 
-	"github.com/go-kit/kit/log"
+	"github.com/yyf330/kit/log"
 	"github.com/sirupsen/logrus"
 )
 
@@ -16,7 +16,7 @@ type logrusLogger struct {
 
 var errMissingValue = errors.New("(MISSING)")
 
-// NewLogrusLogger returns a go-kit log.Logger that sends log events to a Logrus logger.
+// NewLogrusLogger returns a yyf330 log.Logger that sends log events to a Logrus logger.
 func NewLogrusLogger(logger logrus.FieldLogger) log.Logger {
 	return &logrusLogger{logger}
 }

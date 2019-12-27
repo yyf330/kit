@@ -5,8 +5,8 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/go-kit/kit/log"
-	"github.com/go-kit/kit/transport"
+	"github.com/yyf330/kit/log"
+	"github.com/yyf330/kit/transport"
 )
 
 func TestLogErrorHandler(t *testing.T) {

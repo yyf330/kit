@@ -1,9 +1,9 @@
 package etcd
 
 import (
-	"github.com/go-kit/kit/log"
-	"github.com/go-kit/kit/sd"
-	"github.com/go-kit/kit/sd/internal/instance"
+	"github.com/yyf330/kit/log"
+	"github.com/yyf330/kit/sd"
+	"github.com/yyf330/kit/sd/internal/instance"
 )
 
 // Instancer yields instances stored in a certain etcd keyspace. Any kind of

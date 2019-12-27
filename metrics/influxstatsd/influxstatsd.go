@@ -19,12 +19,12 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/go-kit/kit/log"
-	"github.com/go-kit/kit/metrics"
-	"github.com/go-kit/kit/metrics/generic"
-	"github.com/go-kit/kit/metrics/internal/lv"
-	"github.com/go-kit/kit/metrics/internal/ratemap"
-	"github.com/go-kit/kit/util/conn"
+	"github.com/yyf330/kit/log"
+	"github.com/yyf330/kit/metrics"
+	"github.com/yyf330/kit/metrics/generic"
+	"github.com/yyf330/kit/metrics/internal/lv"
+	"github.com/yyf330/kit/metrics/internal/ratemap"
+	"github.com/yyf330/kit/util/conn"
 )
 
 // Influxstatsd receives metrics observations and forwards them to a server.
@@ -60,7 +60,7 @@ func New(prefix string, logger log.Logger, lvs ...string) *Influxstatsd {
 		prefix:     prefix,
 		rates:      ratemap.New(),
 		counters:   lv.NewSpace(),
-		gauges:     map[string]*gaugeNode{}, // https://github.com/go-kit/kit/pull/588
+		gauges:     map[string]*gaugeNode{}, // https://github.com/yyf330/kit/pull/588
 		timings:    lv.NewSpace(),
 		histograms: lv.NewSpace(),
 		logger:     logger,

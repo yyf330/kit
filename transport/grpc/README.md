@@ -1,20 +1,20 @@
 # grpc
 
 [gRPC](http://www.grpc.io/) is an excellent, modern IDL and transport for
-microservices. If you're starting a greenfield project, go-kit strongly
+microservices. If you're starting a greenfield project, yyf330 strongly
 recommends gRPC as your default transport.
 
 One important note is that while gRPC supports streaming requests and replies,
-go-kit does not. You can still use streams in your service, but their
-implementation will not be able to take advantage of many go-kit features like middleware.
+yyf330 does not. You can still use streams in your service, but their
+implementation will not be able to take advantage of many yyf330 features like middleware.
 
-Using gRPC and go-kit together is very simple.
+Using gRPC and yyf330 together is very simple.
 
 First, define your service using protobuf3. This is explained
 [in gRPC documentation](http://www.grpc.io/docs/#defining-a-service).
 See
-[add.proto](https://github.com/go-kit/kit/blob/ec8b02591ee873433565a1ae9d317353412d1d27/examples/addsvc/pb/add.proto)
-for an example. Make sure the proto definition matches your service's go-kit
+[add.proto](https://github.com/yyf330/kit/blob/ec8b02591ee873433565a1ae9d317353412d1d27/examples/addsvc/pb/add.proto)
+for an example. Make sure the proto definition matches your service's yyf330
 (interface) definition.
 
 Next, get the protoc compiler.
@@ -43,12 +43,12 @@ protoc add.proto --go_out=plugins=grpc:.
 Finally, write a tiny binding from your service definition to the gRPC
 definition. It's a simple conversion from one domain to another.
 See
-[grpc_binding.go](https://github.com/go-kit/kit/blob/ec8b02591ee873433565a1ae9d317353412d1d27/examples/addsvc/grpc_binding.go)
+[grpc_binding.go](https://github.com/yyf330/kit/blob/ec8b02591ee873433565a1ae9d317353412d1d27/examples/addsvc/grpc_binding.go)
 for an example.
 
 That's it!
 The gRPC binding can be bound to a listener and serve normal gRPC requests.
-And within your service, you can use standard go-kit components and idioms.
-See [addsvc](https://github.com/go-kit/kit/tree/master/examples/addsvc) for
-a complete working example with gRPC support. And remember: go-kit services
+And within your service, you can use standard yyf330 components and idioms.
+See [addsvc](https://github.com/yyf330/kit/tree/master/examples/addsvc) for
+a complete working example with gRPC support. And remember: yyf330 services
 can support multiple transports simultaneously.

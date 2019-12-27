@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/go-kit/kit/log"
+	"github.com/yyf330/kit/log"
 	"github.com/hudl/fargo"
 )
 
@@ -25,7 +25,7 @@ var (
 	errTest       = errors.New("kaboom")
 	errNotFound   = &fargoUnsuccessfulHTTPResponse{statusCode: 404, messagePrefix: "not found"}
 	loggerTest    = log.NewNopLogger()
-	appNameTest   = "go-kit"
+	appNameTest   = "yyf330"
 	instanceTest1 = &fargo.Instance{
 		HostName:         "serveregistrar1.acme.org",
 		Port:             8080,

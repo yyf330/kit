@@ -5,26 +5,18 @@ import (
 	"context"
 	"encoding/json"
 	"encoding/xml"
-	"io"
 	"io/ioutil"
 	"net/http"
 	"net/url"
+	"log"
 
 	"github.com/yyf330/kit/endpoint"
 )
 
-// HTTPClient is an interface that models *http.Client.
-type HTTPClient interface {
-	Do(req *http.Request) (*http.Response, error)
-}
-
 // Client wraps a URL and provides a method that implements endpoint.Endpoint.
 type Client struct {
-	client         HTTPClient
-	method         string
-	tgt            *url.URL
-	enc            EncodeRequestFunc
-	dec            DecodeResponseFunc
+	client         *http.Client
+	tgt            string
 	before         []RequestFunc
 	after          []ClientResponseFunc
 	finalizer      []ClientFinalizerFunc
@@ -33,18 +25,12 @@ type Client struct {
 
 // NewClient constructs a usable Client for a single remote method.
 func NewClient(
-	method string,
-	tgt *url.URL,
-	enc EncodeRequestFunc,
-	dec DecodeResponseFunc,
+	target string,
 	options ...ClientOption,
 ) *Client {
 	c := &Client{
 		client:         http.DefaultClient,
-		method:         method,
-		tgt:            tgt,
-		enc:            enc,
-		dec:            dec,
+		tgt:            target,
 		before:         []RequestFunc{},
 		after:          []ClientResponseFunc{},
 		bufferedStream: false,
@@ -60,7 +46,7 @@ type ClientOption func(*Client)
 
 // SetClient sets the underlying HTTP client used for requests.
 // By default, http.DefaultClient is used.
-func SetClient(client HTTPClient) ClientOption {
+func SetClient(client *http.Client) ClientOption {
 	return func(c *Client) { c.client = client }
 }
 
@@ -85,15 +71,15 @@ func ClientFinalizer(f ...ClientFinalizerFunc) ClientOption {
 
 // BufferedStream sets whether the Response.Body is left open, allowing it
 // to be read from later. Useful for transporting a file as a buffered stream.
-// That body has to be Closed to propery end the request.
 func BufferedStream(buffered bool) ClientOption {
 	return func(c *Client) { c.bufferedStream = buffered }
 }
 
 // Endpoint returns a usable endpoint that invokes the remote endpoint.
 func (c Client) Endpoint() endpoint.Endpoint {
-	return func(ctx context.Context, request interface{}) (interface{}, error) {
+	return func(ctx context.Context, method, rawUrl string, headers map[string]string, reqObj interface{}, respObj interface{}) (interface{}, error) {
 		ctx, cancel := context.WithCancel(ctx)
+		defer cancel()
 
 		var (
 			resp *http.Response
@@ -111,15 +97,29 @@ func (c Client) Endpoint() endpoint.Endpoint {
 			}()
 		}
 
-		req, err := http.NewRequest(c.method, c.tgt.String(), nil)
+		u, err := url.Parse(c.tgt + rawUrl)
 		if err != nil {
-			cancel()
+			log.Println("Httplib:", err)
+		}
+
+		req, err := http.NewRequest(method, u.String(), nil)
+		if err != nil {
 			return nil, err
 		}
 
-		if err = c.enc(ctx, req, request); err != nil {
-			cancel()
-			return nil, err
+		for k, v := range headers {
+			req.Header.Set(k, v)
+		}
+
+		// encode reqObj
+		if req.Body == nil && reqObj != nil {
+			byts, err := json.Marshal(reqObj)
+			if err != nil {
+				return nil, err
+			}
+			req.Body = ioutil.NopCloser(bytes.NewReader(byts))
+			req.ContentLength = int64(len(byts))
+			req.Header.Set("Content-Type", "application/json")
 		}
 
 		for _, f := range c.before {
@@ -129,44 +129,26 @@ func (c Client) Endpoint() endpoint.Endpoint {
 		resp, err = c.client.Do(req.WithContext(ctx))
 
 		if err != nil {
-			cancel()
 			return nil, err
 		}
 
-		// If we expect a buffered stream, we don't cancel the context when the endpoint returns.
-		// Instead, we should call the cancel func when closing the response body.
-		if c.bufferedStream {
-			resp.Body = bodyWithCancel{ReadCloser: resp.Body, cancel: cancel}
-		} else {
+		if !c.bufferedStream {
 			defer resp.Body.Close()
-			defer cancel()
 		}
 
 		for _, f := range c.after {
 			ctx = f(ctx, resp)
 		}
 
-		response, err := c.dec(ctx, resp)
-		if err != nil {
-			return nil, err
+		// decode respObj
+		if respObj != nil {
+			if err := json.NewDecoder(resp.Body).Decode(&respObj); err != nil {
+				return nil, err
+			}
 		}
 
-		return response, nil
+		return respObj, nil
 	}
-}
-
-// bodyWithCancel is a wrapper for an io.ReadCloser with also a
-// cancel function which is called when the Close is used
-type bodyWithCancel struct {
-	io.ReadCloser
-
-	cancel context.CancelFunc
-}
-
-func (bwc bodyWithCancel) Close() error {
-	bwc.ReadCloser.Close()
-	bwc.cancel()
-	return nil
 }
 
 // ClientFinalizerFunc can be used to perform work at the end of a client HTTP

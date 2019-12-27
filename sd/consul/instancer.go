@@ -7,6 +7,7 @@ import (
 
 	consul "github.com/hashicorp/consul/api"
 
+
 	"github.com/yyf330/kit/log"
 	"github.com/yyf330/kit/sd"
 	"github.com/yyf330/kit/sd/internal/instance"

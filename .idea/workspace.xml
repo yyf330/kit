@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="edc018dc-d7e8-44f2-a4e7-ef0e25635dd3" name="Default" comment="modify for go mod">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/CONTRIBUTING.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/LICENSE" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/auth/basic/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/auth/basic/middleware.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/auth/basic/middleware_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/auth/casbin/middleware.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/auth/casbin/middleware_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/auth/casbin/testdata/basic_model.conf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/auth/casbin/testdata/basic_policy.csv" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/auth/casbin/testdata/keymatch_policy.csv" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/auth/jwt/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/auth/jwt/middleware.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/auth/jwt/middleware_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/auth/jwt/transport.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/auth/jwt/transport_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/circle.yml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/circuitbreaker/doc.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/circuitbreaker/gobreaker.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/circuitbreaker/gobreaker_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/circuitbreaker/handy_breaker.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/circuitbreaker/handy_breaker_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/circuitbreaker/hystrix.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/circuitbreaker/hystrix_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/circuitbreaker/util_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/cmd/kitgen/.ignore" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/cmd/kitgen/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/cmd/kitgen/arg.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/cmd/kitgen/ast_helpers.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/cmd/kitgen/ast_templates.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/cmd/kitgen/deflayout.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/cmd/kitgen/flatlayout.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/cmd/kitgen/interface.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/cmd/kitgen/main.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/cmd/kitgen/main_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/cmd/kitgen/method.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/cmd/kitgen/parsevisitor.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/cmd/kitgen/path_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/cmd/kitgen/replacewalk.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/cmd/kitgen/sourcecontext.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/cmd/kitgen/templates/full.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/cmd/kitgen/testdata/anonfields/default/endpoints/endpoints.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/cmd/kitgen/testdata/anonfields/default/http/http.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/cmd/kitgen/testdata/anonfields/default/service/service.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/cmd/kitgen/testdata/anonfields/flat/gokit.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/cmd/kitgen/testdata/anonfields/in.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/cmd/kitgen/testdata/foo/default/endpoints/endpoints.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/cmd/kitgen/testdata/foo/default/http/http.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/cmd/kitgen/testdata/foo/default/service/service.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/cmd/kitgen/testdata/foo/flat/gokit.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/cmd/kitgen/testdata/foo/in.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/cmd/kitgen/testdata/profilesvc/default/endpoints/endpoints.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/cmd/kitgen/testdata/profilesvc/default/http/http.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/cmd/kitgen/testdata/profilesvc/default/service/service.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/cmd/kitgen/testdata/profilesvc/flat/gokit.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/cmd/kitgen/testdata/profilesvc/in.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/cmd/kitgen/testdata/stringservice/default/endpoints/endpoints.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/cmd/kitgen/testdata/stringservice/default/http/http.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/cmd/kitgen/testdata/stringservice/default/service/service.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/cmd/kitgen/testdata/stringservice/flat/gokit.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/cmd/kitgen/testdata/stringservice/in.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/cmd/kitgen/testdata/underscores/default/endpoints/endpoints.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/cmd/kitgen/testdata/underscores/default/http/http.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/cmd/kitgen/testdata/underscores/default/service/service.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/cmd/kitgen/testdata/underscores/flat/gokit.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/cmd/kitgen/testdata/underscores/in.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/cmd/kitgen/transform.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/coveralls.bash" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/docker-compose-integration.yml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/endpoint/doc.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/endpoint/endpoint.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/endpoint/endpoint_example_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/addsvc/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/addsvc/cmd/addcli/addcli.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/addsvc/cmd/addsvc/addsvc.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/addsvc/cmd/addsvc/pact_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/addsvc/cmd/addsvc/wiring_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/addsvc/pb/addsvc.pb.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/addsvc/pb/addsvc.proto" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/addsvc/pb/compile.sh" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/addsvc/pkg/addendpoint/middleware.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/addsvc/pkg/addendpoint/set.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/addsvc/pkg/addservice/middleware.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/addsvc/pkg/addservice/service.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/addsvc/pkg/addtransport/grpc.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/addsvc/pkg/addtransport/http.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/addsvc/pkg/addtransport/jsonrpc.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/addsvc/pkg/addtransport/thrift.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/addsvc/thrift/addsvc.thrift" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/addsvc/thrift/compile.sh" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/addsvc/thrift/gen-go/addsvc/GoUnusedProtection__.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/addsvc/thrift/gen-go/addsvc/add_service-remote/add_service-remote.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/addsvc/thrift/gen-go/addsvc/addsvc-consts.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/addsvc/thrift/gen-go/addsvc/addsvc.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/apigateway/main.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/profilesvc/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/profilesvc/client/client.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/profilesvc/cmd/profilesvc/main.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/profilesvc/endpoints.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/profilesvc/middlewares.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/profilesvc/service.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/profilesvc/transport.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/shipping/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/shipping/booking/endpoint.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/shipping/booking/instrumenting.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/shipping/booking/logging.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/shipping/booking/service.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/shipping/booking/transport.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/shipping/cargo/cargo.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/shipping/cargo/delivery.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/shipping/cargo/handling.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/shipping/cargo/itinerary.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/shipping/handling/endpoint.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/shipping/handling/instrumenting.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/shipping/handling/logging.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/shipping/handling/service.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/shipping/handling/transport.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/shipping/inmem/inmem.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/shipping/inspection/inspection.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/shipping/location/location.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/shipping/location/sample_locations.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/shipping/main.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/shipping/routing/proxying.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/shipping/routing/routing.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/shipping/tracking/endpoint.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/shipping/tracking/instrumenting.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/shipping/tracking/logging.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/shipping/tracking/service.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/shipping/tracking/transport.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/shipping/voyage/sample_voyages.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/shipping/voyage/voyage.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/stringsvc1/main.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/stringsvc2/instrumenting.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/stringsvc2/logging.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/stringsvc2/main.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/stringsvc2/service.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/stringsvc2/transport.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/stringsvc3/instrumenting.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/stringsvc3/logging.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/stringsvc3/main.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/stringsvc3/proxying.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/stringsvc3/service.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/stringsvc3/transport.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/examples/stringsvc4/main.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/go.mod" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/go.sum" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/lint" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/benchmark_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/concurrency_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/deprecated_levels/levels.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/deprecated_levels/levels_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/doc.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/example_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/json_logger.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/json_logger_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/level/benchmark_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/level/doc.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/level/example_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/level/level.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/level/level_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/log.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/log_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/logfmt_logger.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/logfmt_logger_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/logrus/logrus_logger.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/logrus/logrus_logger_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/nop_logger.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/nop_logger_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/stdlib.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/stdlib_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/sync.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/sync_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/syslog/example_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/syslog/syslog.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/syslog/syslog_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/term/LICENSE" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/term/colorlogger.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/term/colorlogger_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/term/colorwriter_others.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/term/colorwriter_windows.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/term/example_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/term/term.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/term/terminal_appengine.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/term/terminal_darwin.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/term/terminal_freebsd.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/term/terminal_linux.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/term/terminal_notwindows.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/term/terminal_openbsd.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/term/terminal_windows.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/term/terminal_windows_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/value.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/value_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/zap/zap_sugar_logger.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/log/zap/zap_sugar_logger_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/cloudwatch/cloudwatch.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/cloudwatch/cloudwatch_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/cloudwatch2/cloudwatch2.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/cloudwatch2/cloudwatch2_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/discard/discard.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/doc.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/dogstatsd/dogstatsd.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/dogstatsd/dogstatsd_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/expvar/expvar.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/expvar/expvar_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/generic/generic.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/generic/generic_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/graphite/graphite.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/graphite/graphite_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/influx/example_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/influx/influx.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/influx/influx_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/influxstatsd/influxstatsd.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/influxstatsd/influxstatsd_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/internal/convert/convert.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/internal/convert/convert_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/internal/lv/labelvalues.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/internal/lv/labelvalues_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/internal/lv/space.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/internal/lv/space_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/internal/ratemap/ratemap.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/metrics.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/multi/multi.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/multi/multi_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/pcp/pcp.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/pcp/pcp_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/prometheus/prometheus.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/prometheus/prometheus_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/provider/discard.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/provider/dogstatsd.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/provider/expvar.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/provider/graphite.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/provider/influx.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/provider/prometheus.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/provider/provider.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/provider/statsd.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/statsd/statsd.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/statsd/statsd_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/teststat/buffers.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/teststat/populate.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/teststat/teststat.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/timer.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/metrics/timer_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/ratelimit/token_bucket.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/ratelimit/token_bucket_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/benchmark_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/consul/client.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/consul/client_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/consul/doc.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/consul/instancer.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/consul/instancer_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/consul/integration_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/consul/registrar.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/consul/registrar_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/dnssrv/doc.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/dnssrv/instancer.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/dnssrv/instancer_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/dnssrv/lookup.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/doc.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/endpoint_cache.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/endpoint_cache_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/endpointer.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/endpointer_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/etcd/client.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/etcd/client_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/etcd/doc.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/etcd/example_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/etcd/instancer.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/etcd/instancer_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/etcd/integration_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/etcd/registrar.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/etcd/registrar_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/etcdv3/client.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/etcdv3/doc.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/etcdv3/example_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/etcdv3/instancer.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/etcdv3/instancer_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/etcdv3/integration_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/etcdv3/registrar.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/etcdv3/registrar_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/eureka/doc.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/eureka/instancer.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/eureka/instancer_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/eureka/integration_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/eureka/registrar.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/eureka/registrar_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/eureka/util_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/factory.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/instancer.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/internal/instance/cache.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/internal/instance/cache_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/lb/balancer.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/lb/doc.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/lb/random.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/lb/random_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/lb/retry.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/lb/retry_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/lb/round_robin.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/lb/round_robin_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/registrar.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/zk/client.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/zk/client_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/zk/doc.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/zk/instancer.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/zk/instancer_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/zk/integration_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/zk/logwrapper.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/zk/registrar.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/sd/zk/util_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/tracing/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/tracing/doc.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/tracing/opencensus/doc.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/tracing/opencensus/endpoint.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/tracing/opencensus/endpoint_options.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/tracing/opencensus/endpoint_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/tracing/opencensus/grpc.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/tracing/opencensus/grpc_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/tracing/opencensus/http.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/tracing/opencensus/http_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/tracing/opencensus/opencensus_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/tracing/opencensus/tracer_options.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/tracing/opentracing/doc.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/tracing/opentracing/endpoint.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/tracing/opentracing/endpoint_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/tracing/opentracing/grpc.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/tracing/opentracing/grpc_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/tracing/opentracing/http.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/tracing/opentracing/http_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/tracing/zipkin/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/tracing/zipkin/doc.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/tracing/zipkin/endpoint.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/tracing/zipkin/endpoint_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/tracing/zipkin/grpc.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/tracing/zipkin/grpc_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/tracing/zipkin/http.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/tracing/zipkin/http_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/tracing/zipkin/options.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/amqp/doc.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/amqp/encode_decode.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/amqp/publisher.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/amqp/publisher_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/amqp/request_response_func.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/amqp/subscriber.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/amqp/subscriber_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/amqp/util.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/awslambda/doc.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/awslambda/encode_decode.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/awslambda/handler.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/awslambda/handler_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/awslambda/request_response_funcs.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/doc.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/error_handler.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/error_handler_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/grpc/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/grpc/_grpc_test/client.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/grpc/_grpc_test/context_metadata.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/grpc/_grpc_test/pb/generate.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/grpc/_grpc_test/pb/test.pb.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/grpc/_grpc_test/pb/test.proto" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/grpc/_grpc_test/request_response.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/grpc/_grpc_test/server.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/grpc/_grpc_test/service.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/grpc/client.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/grpc/client_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/grpc/doc.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/grpc/encode_decode.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/grpc/request_response_funcs.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/grpc/server.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/http/client.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/http/client_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/http/doc.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/http/encode_decode.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/http/example_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/http/jsonrpc/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/http/jsonrpc/client.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/http/jsonrpc/client_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/http/jsonrpc/doc.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/http/jsonrpc/encode_decode.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/http/jsonrpc/error.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/http/jsonrpc/error_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/http/jsonrpc/request_response_types.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/http/jsonrpc/request_response_types_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/http/jsonrpc/server.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/http/jsonrpc/server_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/http/proto/client.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/http/proto/proto_pb_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/http/proto/proto_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/http/proto/proto_test.proto" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/http/proto/server.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/http/request_response_funcs.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/http/request_response_funcs_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/http/server.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/http/server_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/httprp/doc.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/httprp/server.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/httprp/server_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/nats/doc.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/nats/encode_decode.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/nats/publisher.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/nats/publisher_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/nats/request_response_funcs.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/nats/subscriber.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/nats/subscriber_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/netrpc/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/transport/thrift/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/update_deps.bash" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/util/conn/doc.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/util/conn/manager.go" />
+      <change beforePath="$PROJECT_DIR$/util/README.md" afterPath="$PROJECT_DIR$/util/README.md" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>go-kit</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>yyf330</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$</dir>
+    </dirStrings>
+  </component>
+  <component name="GOROOT" path="$USER_HOME$/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/sd/consul/instancer.go" />
+        <option value="$PROJECT_DIR$/endpoint/endpoint.go" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="249" />
+    <option name="width" value="552" />
+    <option name="height" value="601" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="kit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kit" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kit" type="462c0819:PsiDirectoryNode" />
+              <item name="sd" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="GO_FMT" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Go Build.go build main.go (1)">
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="kit" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/" />
+      <package value="github.com/yyf330/kit" />
+      <directory value="$PROJECT_DIR$/" />
+    </configuration>
+    <configuration name="go build main.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
+      <module name="kit" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/examples/stringsvc3/main.go" />
+      <package value="github.com/yyf330/kit" />
+      <directory value="$PROJECT_DIR$/" />
+    </configuration>
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
+      <module name="kit" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/examples/stringsvc2/main.go" />
+      <package value="github.com/yyf330/kit" />
+      <directory value="$PROJECT_DIR$/" />
+    </configuration>
+    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
+      <module name="kit" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <go_parameters value="-i" />
+      <framework value="gotest" />
+      <kind value="DIRECTORY" />
+      <package value="github.com/yyf330/kit" />
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Go Build.go build main.go" />
+      <item index="1" class="java.lang.String" itemvalue="Go Build.go build main.go (1)" />
+    </list>
+    <recent_temporary>
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Go Build.go build main.go (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Go Build.go build main.go" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-1" y="28" width="1918" height="828" extended-state="6" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288889" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8888889" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="modify for go mod" />
+    <option name="LAST_COMMIT_MESSAGE" value="modify for go mod" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/examples/stringsvc2/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="51" column="14" lean-forward="false" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/stringsvc2/transport.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="45" column="5" lean-forward="false" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/stringsvc2/service.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="12" lean-forward="false" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/transport/http/client.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1477">
+          <caret line="94" column="43" lean-forward="false" selection-start-line="94" selection-start-column="43" selection-end-line="94" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/endpoint/endpoint.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+          <folding>
+            <element signature="e#18#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sd/consul/instancer.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/stringsvc3/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
